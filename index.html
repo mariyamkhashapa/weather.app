@@ -191,7 +191,7 @@ const isDayTime = (icon) => {
 updateWeatherApp = (city) => {
     console.log(city);
     const imageName = city.weather[0].icon;
-    const iconSrc = `http://openweathermap.org/img/wn/${imageName}@2x.png`
+    const iconSrc = `https://openweathermap.org/img/wn/${imageName}@2x.png`
     cityName.textContent = city.name;
     cardBody.innerHTML = `
     <div class="card-mid row">
@@ -264,7 +264,7 @@ searchForm.addEventListener('submit', e => {
 // to call the API (modern js)
 const key = 'cbe3dd267a18f6c89943b3eff94f1ed7';
 const requestCity = async (city) => {
-    const URL = 'http://api.openweathermap.org/data/2.5/weather'
+    const URL = 'https://api.openweathermap.org/data/2.5/weather'
     const query = `?q=${city}&appid=${key}`;
     const response = await fetch(URL + query);
     const data = await response.json();
